@@ -1,29 +1,28 @@
 import os
 
-input_file = 'got.txt'
-output_directory = 'data_chunks'
-chunk_size = 1024
+INPUT_FILE = 'got.txt'
+OUTPUT_DIRECTORY = 'data_chunks'
+CHUNK_SIZE = 1024
 
-if not os.path.exists(output_directory):
-    os.makedirs(output_directory)
+if not os.path.exists(OUTPUT_DIRECTORY):
+    os.makedirs(OUTPUT_DIRECTORY)
 
 # Read the input file
-with open(input_file, 'r', encoding='utf-8') as file:
+with open(INPUT_FILE, 'r', encoding='utf-8') as file:
     text = file.read()
 
 # Calculate the number of chunks required
-num_chunks = len(text) // chunk_size
-if len(text) % chunk_size != 0:
+num_chunks = len(text) // CHUNK_SIZE
+if len(text) % CHUNK_SIZE != 0:
     num_chunks += 1
 
 # Split the text into chunks and save as individual files
 for i in range(num_chunks):
-    start = i * chunk_size
-    end = (i + 1) * chunk_size
+    start = i * CHUNK_SIZE
+    end = (i + 1) * CHUNK_SIZE
     chunk = text[start:end]
-    
     # Save the chunk to a file
-    chunk_filename = os.path.join(output_directory, f'chunk_{i}.txt')
+    chunk_filename = os.path.join(OUTPUT_DIRECTORY, f'chunk_{i}.txt')
     with open(chunk_filename, 'w', encoding='utf-8') as file:
         file.write(chunk)
 
