@@ -21,3 +21,8 @@ To hit the api you can open postman/any other apps for api post you want<br />
 "max_length": 800,
 "top_k": 5 }
 ```
+
+# To train it faster
+If your machine is equipped with CUDA capabilities, I kindly request that you uncomment a few lines in the models.py and runner.py files. These lines pertain to CUDA-specific configurations and optimizations. However, please note that I do not have access to a CUDA-enabled machine, so I have disabled these lines in my version of the code.
+
+To ensure compatibility and seamless execution on non-CUDA machines, I have thoroughly tested the project without CUDA dependencies. Rest assured that the functionality and performance remain unaffected.
