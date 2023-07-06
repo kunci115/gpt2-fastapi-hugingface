@@ -1,6 +1,12 @@
 # gpt2-fastapi-hugingface
+This is an example how to do fine tuning with your own datasets from huggingface gpt2 models
+
+# Installation
+```git clone this repository```
 ```pip install -r requirements.txt``` <br />
+FYI Huggingface only allowing 1024byte of data on every training, so we should chunk our data
 ```run prepare_data.py to generate got.txt into chunked``` <br />
+
 ```run models.py to fine tuned our model into existing huggingface data```<br />
 turn on the api by typing this<br />
 ```uvicorn main:app --reload```<br />
