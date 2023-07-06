@@ -7,12 +7,12 @@ This is an example how to do fine tuning with your own datasets from huggingface
 3. FYI Huggingface only allowing 1024byte of data on every training, so we should chunk our data <br/>
 ```run prepare_data.py to generate got.txt into chunked``` <br />
 
-```run models.py to fine tuned our model into existing huggingface data```<br />
-turn on the api by typing this<br />
-```uvicorn main:app --reload```<br />
+4. ```run models.py to fine tuned our model into existing huggingface data```<br />
+Turn on the api by typing this<br />
+5. ```uvicorn main:app --reload```<br />
 
-# hit api
-to hit the api you can open postman/any other apps for api post you want<br />
+# Hit api
+To hit the api you can open postman/any other apps for api post you want<br />
 
 ```hit into localhost:8000/generate```<br />
 ```with this payload as json```<br />
