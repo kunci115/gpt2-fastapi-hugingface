@@ -11,5 +11,7 @@ to hit the api you can open postman/any other apps for api post you want<br />
 ```hit into localhost:8000/generate```<br />
 ```with this payload as json```<br />
 ```JSON 
-{"prefix": "The young knight","max_length": 800,"top_k": 5 }
-``` <br />
+{"prefix": "The young knight",
+"max_length": 800,
+"top_k": 5 }
+```
