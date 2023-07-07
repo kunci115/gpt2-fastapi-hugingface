@@ -1,8 +1,8 @@
-
 import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 async def generate(prefix, max_length=800, top_k=5, model_dir='fine_tuned_model'):
+    """Generate the idea based on inputed prefix"""
     # Load the fine-tuned model and tokenizer
     model = GPT2LMHeadModel.from_pretrained(model_dir)
     tokenizer = GPT2Tokenizer.from_pretrained(model_dir)
@@ -32,3 +32,4 @@ async def generate(prefix, max_length=800, top_k=5, model_dir='fine_tuned_model'
     # Decode and return the generated text
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
     return generated_text
+
