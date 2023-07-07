@@ -26,3 +26,6 @@ To hit the api you can open postman/any other apps for api post you want<br />
 If your machine is equipped with CUDA capabilities, I kindly request that you uncomment a few lines in the models.py and runner.py files. These lines pertain to CUDA-specific configurations and optimizations. However, please note that I do not have access to a CUDA-enabled machine, so I have disabled these lines in my version of the code.
 
 To ensure compatibility and seamless execution on non-CUDA machines, I have thoroughly tested the project without CUDA dependencies. Rest assured that the functionality and performance remain unaffected.
+
+# Code Explanation is on my medium
+[Click here for code explanation](https://medium.com/@rino.alpin/unleashing-the-power-of-fastapi-gpt-2-and-hugging-face-a-guide-to-efficient-natural-language-445b0407cb2b)
